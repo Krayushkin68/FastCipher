@@ -50,7 +50,6 @@ class MyCipher:
                 padded_data = pad.update(block) + pad.finalize()
                 cipher_text = cipher_aes.update(padded_data) + cipher_aes.finalize()
                 crypt_file.write(cipher_text)
-        # os.remove(path_real)
         return
 
     def decrypt_file_aes(self, path_encr, path_real):
@@ -82,12 +81,3 @@ class MyCipher:
         with open(path, 'rb') as f:
             h = hashlib.sha3_256(f.read()).hexdigest()
         return h
-
-
-
-
-# c = MyCipher('password')
-# print(type(str(c.encrypt_str('hello'))))
-# print(c.hash_file('C:\\Users\\Андрей\\PycharmProjects\\ShifrView\\TestFiles\\File #2.pdf'))
-# c.encrypt_file_aes('C:\\Users\\Андрей\\PycharmProjects\\ShifrView\\TestDir\\#test')
-# c.decrypt_file_aes('C:\\Users\\Андрей\\Desktop\\книги\\1. Python книги\\crypt\\test.pdf.crypt')

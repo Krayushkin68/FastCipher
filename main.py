@@ -2,10 +2,6 @@ import gui
 import passw
 import MyCipher
 from PySide2 import QtCore, QtGui, QtWidgets
-from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
-from PySide2.QtWidgets import *
-import os
 
 
 class FastShifr(gui.Ui_MainWindow, QtWidgets.QMainWindow):
@@ -60,7 +56,7 @@ class PassWindow(passw.Ui_MainWindow, QtWidgets.QMainWindow):
         self.move(self.pos() + event.globalPos() - self.dragPos)
         self.dragPos = event.globalPos()
 
-    def mousePressEvent(self, event:QtGui.QMouseEvent):
+    def mousePressEvent(self, event: QtGui.QMouseEvent):
         self.dragPos = event.globalPos()
 
 
@@ -71,7 +67,6 @@ def start_cip(passw):
             cipher.decrypt_file_aes(f, f[:-6])
         else:
             cipher.encrypt_file_aes(f, f+'.crypt')
-
 
 
 if __name__ == '__main__':
