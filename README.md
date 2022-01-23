@@ -1,5 +1,10 @@
 # FastCipher
 Application for fast file encryption with the most intuitive interface
+## Why?
+My attempt at creating fancy, modern interface for a lightweight file encryption application.
+## Used technologies
+*Language*: Python
 
-![Main](https://user-images.githubusercontent.com/71232265/132132041-417c7b68-b6a8-43c2-842b-a81600099b46.JPG)
-![Pass](https://user-images.githubusercontent.com/71232265/132132042-af063383-ebd1-4047-adc2-dc0b2ec2eaa7.JPG)
+*Libraries*: Cryptography, PySide2
+## Example
+![fast_cipher_2](https://user-images.githubusercontent.com/71232265/150681164-bf74d4f5-cd16-46f8-82d5-6ce71c88641a.gif)
